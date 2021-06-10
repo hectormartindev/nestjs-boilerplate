@@ -103,13 +103,11 @@ dist
 # TernJS port file
 .tern-port
 
-# VSCode custom configs and related
-.vscode*
-
 # Weird config folder
 .config
 
 # IDEs and editors
+.vscode*
 /.idea
 .project
 .classpath
