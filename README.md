@@ -1,0 +1,5 @@
+- Separar infra de code?
+- Rama ejemplo
+- README
+- usar subcarpetas dentro de capas DDD
+- .vscode se incluye o no? las líneas 100% necesarias que se hace
