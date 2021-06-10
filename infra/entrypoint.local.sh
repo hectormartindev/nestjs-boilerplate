@@ -10,7 +10,7 @@ if [ $exitCode -ne 0 ] ; then
 fi
 
 echo "*** RUNNING MIGRATIONS ***"
-npm run typeorm:run
+npm run migration:run
 
 exitCode=$?
 if [ $exitCode -ne 0 ] ; then
