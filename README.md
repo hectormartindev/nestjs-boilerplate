@@ -1,5 +1,23 @@
-- Separar infra de code?
+# Wondo Payments API
+
+## 🚀 Infra
+
+- [Overview](/infra/docs/overview.md)
+
+## 🖥 Project
+
+- [Conventions](/project/docs/conventions.md)
+- [IDE settings](/project/docs/ide-settings.md)
+
+<!-- 
+
 - Rama ejemplo
-- README
 - usar subcarpetas dentro de capas DDD
-- .vscode se incluye o no? las líneas 100% necesarias que se hace
+- README
+    - .vscode launch.json debugger
+    - Convenciones
+- Cliente de tests (Aarón & Dani) 
+
+-->
+
+

@@ -8,7 +8,7 @@ COPY ./package*.json .
 
 RUN npm install
 
-COPY ./ ./
+COPY . .
 
 COPY ./docker/entrypoint.local.sh ./entrypoint.sh
 COPY ./docker/wait-for.sh ./wait-for.sh
