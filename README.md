@@ -5,7 +5,7 @@
 
 ## 🖥 Project
 
-- [WorkFlow](/project/docs/workflow)
+- [Workflow](/project/docs/workflow.md)
 - [Conventions](/project/docs/conventions.md)
 - [IDE settings](/project/docs/ide-settings.md)
 
