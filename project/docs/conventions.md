@@ -1,0 +1,26 @@
+- Namings
+    - ficheros
+    - enums
+    - timestamps
+    - currencies
+    - naming tests
+    - constantes
+
+- Convenciones derivadas de DDD
+    - usecase/application
+    - domain
+    - infrastructure
+    - El resto siempre plurales
+    - subcarpetas
+        - types
+        - repositories
+        - entities
+        - domain/services
+        - subdominios ??
+- placing de los tests unitarios, de integración y e2e
+- plural en carpetas
+- Replicación de endpoints en api
+- Endpoints ??? 
+- env ??? 
+- nombres de la base de datos (tablas y columnas)
+- 

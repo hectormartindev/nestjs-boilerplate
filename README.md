@@ -1,5 +1,4 @@
-# Wondo Payments API
-
+# NestJS Boilerplate
 ## 🚀 Infra
 
 - [Overview](/infra/docs/overview.md)
