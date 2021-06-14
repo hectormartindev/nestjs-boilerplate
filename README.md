@@ -5,8 +5,10 @@
 
 ## 🖥 Project
 
+- [WorkFlow](/project/docs/workflow)
 - [Conventions](/project/docs/conventions.md)
 - [IDE settings](/project/docs/ide-settings.md)
+
 
 <!-- 
 
