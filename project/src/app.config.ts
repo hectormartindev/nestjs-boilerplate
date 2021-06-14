@@ -1,3 +1,4 @@
+// Please keep this alphabetically ordered.
 const AppConfig = {
   db: {
     postgres: {
@@ -11,4 +12,5 @@ const AppConfig = {
   deployEnvironment: process.env.DEPLOY_ENV || 'dev',
   listeningPort: parseInt(process.env.APP_PORT || '8080', 10),
 }
+
 export default AppConfig
