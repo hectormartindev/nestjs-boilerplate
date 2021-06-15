@@ -3,7 +3,7 @@ import AppProviders from '../../app.providers'
 import UseCase from '../../shared/domain/use-case.interface'
 import Book from '../domain/book.domain'
 import BookRepository from '../domain/book.repository.interface'
-import BookFinder from '../domain/services/find-book-by-uuid.domain-service'
+import BookFinder from '../domain/services/book-finder.domain-service'
 
 @Injectable()
 export default class FindBookByUuid implements UseCase<{ uuid: string }, Book> {
