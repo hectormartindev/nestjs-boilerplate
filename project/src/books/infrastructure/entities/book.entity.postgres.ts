@@ -5,7 +5,7 @@ import Genre from '../../domain/types/genre.enum'
 @Entity('books')
 @Index(['isbn'], { unique: true })
 export default class BookEntityPostgres {
-  @PrimaryColumn({ name: 'uuid', type: 'varchar', length: 36 })
+  @PrimaryColumn({ name: 'uuid', type: 'uuid' })
   uuid!: string
 
   @Column({ name: 'title', type: 'varchar', length: 36, nullable: false })
@@ -24,13 +24,13 @@ export default class BookEntityPostgres {
   @Column({ type: 'timestamp', name: 'created_at', default: () => 'CURRENT_TIMESTAMP' })
   createdAt!: Timestamp
 
-  @Column({ type: 'varchar', length: 60, name: 'created_by' })
+  @Column({ type: 'varchar', length: 60, name: 'created_by', default: () => 'CURRENT_USER' })
   createdBy!: string
 
   @Column({ type: 'timestamp', name: 'updated_at', default: () => 'CURRENT_TIMESTAMP' })
   updated!: Timestamp
 
-  @Column({ type: 'varchar', length: 60, name: 'updated_by' })
+  @Column({ type: 'varchar', length: 60, name: 'updated_by', default: () => 'CURRENT_USER' })
   updatedBy!: string
 
   toDomainObject(): Book {
