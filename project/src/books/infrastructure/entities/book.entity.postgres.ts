@@ -5,7 +5,7 @@ import Genre from '../../domain/types/genre.enum'
 @Entity('books')
 @Index(['isbn'], { unique: true })
 export default class BookEntityPostgres {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'uuid', type: 'varchar', length: 36 })
   uuid!: string
 
   @Column({ name: 'title', type: 'varchar', length: 36, nullable: false })

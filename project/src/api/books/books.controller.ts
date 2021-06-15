@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common'
 import { ApiBody, ApiNotFoundResponse, ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger'
 import AddBook from '../../books/application/add-book.usecase'
 import FindBookByUuid from '../../books/application/find-book-by-uuid.usecase'
-import BookNotFoundError from '../../books/domain/errors/book-not-found.error'
+import GenericErrorResponseDto from '../../shared/dtos/generic-error-response.dto'
 import CreateBookDto from './dtos/create-book.dto'
 import GetBookResponseDto from './dtos/get-book-response.dto'
 import SaveBookResponseDto from './dtos/save-book-response.dto'
@@ -24,7 +24,7 @@ export default class BooksController {
   @ApiOkResponse({ description: 'Returns the book', type: GetBookResponseDto })
   @ApiNotFoundResponse({
     description: 'The book with the given uuid was not found',
-    type: BookNotFoundError,
+    type: GenericErrorResponseDto,
   })
   @Get('/:uuid')
   async getBookByUuid(@Param('uuid') uuid: string): Promise<GetBookResponseDto> {
