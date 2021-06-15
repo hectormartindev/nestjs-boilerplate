@@ -2,7 +2,13 @@ import { ApiProperty } from '@nestjs/swagger'
 import { IsEnum, IsISBN, IsPositive, Length } from 'class-validator'
 import Genre from '../../../books/domain/types/genre.enum'
 
-export default class CreateBookDto {
+export default class SaveBookResponseDto {
+  @ApiProperty({
+    description: 'Uuid of the book',
+    example: '8275cf5f-c871-4d1a-bbcb-97549567b705',
+  })
+  uuid!: string
+
   @ApiProperty({ description: 'Title of the book', example: 'Domain-Driven Design', maxLength: 36 })
   @Length(0, 36)
   title!: string
@@ -29,4 +35,24 @@ export default class CreateBookDto {
   })
   @IsEnum(Genre)
   genre!: Genre
+
+  constructor({
+    uuid,
+    title,
+    isbn,
+    numberOfPages,
+    genre,
+  }: {
+    uuid: string
+    title: string
+    isbn: string
+    numberOfPages: number
+    genre: Genre
+  }) {
+    this.uuid = uuid
+    this.title = title
+    this.isbn = isbn
+    this.numberOfPages = numberOfPages
+    this.genre = genre
+  }
 }
