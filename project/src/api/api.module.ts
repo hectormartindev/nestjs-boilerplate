@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common'
+import OrmSwitcherModule from '../../database/orm-switcher.module'
 import AppConfig from '../app.config'
-import OrmSwitcherModule from '../shared/infrastructure/database/orm-switcher.module'
 import HealthModule from './health/health.module'
 
 @Module({

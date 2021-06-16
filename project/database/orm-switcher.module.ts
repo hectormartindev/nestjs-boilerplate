@@ -1,6 +1,6 @@
 import { DynamicModule, Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import ormConfig from '../../../orm.config'
+import ormConfig from './orm.config'
 
 @Module({})
 export default class OrmSwitcherModule {
