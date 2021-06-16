@@ -4,8 +4,8 @@ import { Connection, createConnection } from 'typeorm'
 import Book from '../../src/books/domain/book.domain'
 import Genre from '../../src/books/domain/types/genre.enum'
 import BookEntityPostgres from '../../src/books/infrastructure/entities/book.entity.postgres'
-import * as ormconfig from '../../src/orm.config'
 import isDevelopEnvironment from '../../src/shared/utils/is-develop-environment.util'
+import * as ormconfig from '../orm.config'
 
 /**
  * Books seeder only used for development.
