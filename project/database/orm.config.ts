@@ -1,6 +1,6 @@
 import path from 'path'
 import { ConnectionOptions } from 'typeorm'
-import AppConfig from './app.config'
+import AppConfig from '../src/app.config'
 
 const config: ConnectionOptions = {
   type: 'postgres',
@@ -9,15 +9,15 @@ const config: ConnectionOptions = {
   username: AppConfig.db.postgres.username,
   password: AppConfig.db.postgres.password,
   database: AppConfig.db.postgres.database,
-  entities: [path.resolve(__dirname, './**/*.entity.*{.ts,.js}')],
+  entities: [path.resolve(__dirname, '../src/**/*.entity.*{.ts,.js}')],
   synchronize: false,
   migrationsRun: false,
   migrationsTableName: 'migrations',
   logging: true,
   logger: 'file',
-  migrations: [path.resolve(__dirname, './../database/migrations/**/*{.ts,.js}')],
+  migrations: [path.resolve(__dirname, './migrations/**/*{.ts,.js}')],
   cli: {
-    migrationsDir: './database/migrations/',
+    migrationsDir: 'project/database/migrations',
   },
 }
 

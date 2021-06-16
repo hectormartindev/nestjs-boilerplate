@@ -1,5 +1,5 @@
 import { Connection, createConnection } from 'typeorm'
-import connectionOptions from '../../../../orm.config'
+import connectionOptions from '../../../../../database/orm.config'
 
 const databaseConnectionProviderPostgres = {
   provide: 'DATABASE_CONNECTION',
