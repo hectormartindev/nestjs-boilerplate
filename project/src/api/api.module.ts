@@ -1,9 +1,15 @@
 import { Module } from '@nestjs/common'
-import DatabaseConnectionModule from '../shared/infrastructure/database/relational/database-connection.module'
+import AppConfig from '../app.config'
+import OrmSwitcherModule from '../shared/infrastructure/database/orm-switcher.module'
 import HealthModule from './health/health.module'
 
 @Module({
-  imports: [DatabaseConnectionModule, HealthModule],
+  imports: [
+    HealthModule,
+    OrmSwitcherModule.init({
+      disable: AppConfig.testModeEnabled && !AppConfig.forceEnableORMRepositories,
+    }),
+  ],
   controllers: [],
 })
 export default class ApiModule {}
