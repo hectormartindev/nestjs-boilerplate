@@ -10,7 +10,9 @@ const AppConfig = {
     },
   },
   deployEnvironment: process.env.DEPLOY_ENV || 'dev',
+  forceEnableORMRepositories: process.env.ENABLE_TEST_ORM_REPOSITORIES === 'true',
   listeningPort: parseInt(process.env.APP_PORT || '8080', 10),
+  testModeEnabled: process.env.NODE_ENV === 'test',
 }
 
 export default AppConfig

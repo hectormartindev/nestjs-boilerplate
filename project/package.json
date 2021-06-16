@@ -89,6 +89,9 @@
     "setupFiles": [
       "<rootDir>/test/set-env-vars.ts"
     ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.ts"
+    ],
     "collectCoverage": true,
     "coverageDirectory": "./coverage",
     "collectCoverageFrom": [
