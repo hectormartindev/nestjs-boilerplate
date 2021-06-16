@@ -1,11 +1,11 @@
 # Project workflow
 
-- [🛠 Local Setup](#🛠-local-setup)
-- [🩺 Health Check](#🩺-health-check)
-- [🔑 Environment Variables](#🔑-environment-variables)
-- [📊 Database](#📊-database)
-- [📜 Swagger](#📜-swagger)
-- [📘 Documentation](#📘-documentation)
+- [🛠 Local Setup](#-local-setup)
+- [🩺 Health Check](#-health-check)
+- [🔑 Environment Variables](#-environment-variables)
+- [📊 Database](#-database)
+- [📜 Swagger](#-swagger)
+- [📘 Documentation](#-documentation)
 
 ## 🛠 Local Setup
 
