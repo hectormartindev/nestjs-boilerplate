@@ -20,7 +20,5 @@
 - placing de los tests unitarios, de integración y e2e
 - plural en carpetas
 - Replicación de endpoints en api
-- Endpoints ??? 
-- env ??? 
 - nombres de la base de datos (tablas y columnas)
 - 

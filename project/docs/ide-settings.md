@@ -1,18 +1,8 @@
 # IDE settings 
 
-- [Visual Code](#visual-code)
-- [WebStorm](#Web-storm)
-## Visual Code
-### settings.json 
-```json
-{
-    "ndkdn":"smldm",
-}
-```
-### launch.json
-```json
-{
+- [Visual Studio Code](#visual-studio-code)
+- [WebStorm](#webstorm)
 
-}
-```
+## Visual Studio Code
+
 ## WebStorm
