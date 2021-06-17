@@ -1,5 +1,6 @@
 # Project Conventions
 
+- [Architecture](#architecture)
 - [Name Conventions](#name-conventions)
     - [Files](#files)
     - [Tests](#tests)
@@ -7,7 +8,25 @@
     - [Constants](#constants)
     - [Timestamps](#timestamps)
     - [Database](#database)
-- [Architecture](#architecture)
+
+## Architecture
+
+We are applying [Domain-Driven Design](https://martinfowler.com/bliki/DomainDrivenDesign.html) patterns in the project. Our domain directories have the following folders:
+- application
+- domain
+- infrastructure
+
+We are using plural nouns for domain directories and subfolders (apart from the application, domain and infrastructure ones). For instance, we may have a `books` domain directory that could look like:
+
+- books
+    - application
+    - domain
+        - types
+    - infrastructure
+        - entities   
+        - repositories
+
+Unit tests are placed next to their corresponding files but end-to-end tests are placed in the `test` directory.
 
 ## Name Conventions
 
@@ -62,22 +81,3 @@ We are using integer numbers for currencies, with the last two digits representi
 ```
 5.56€ would be represented as 556
 ```
-
-## Architecture
-
-We are applying [Domain-Driven Design](https://martinfowler.com/bliki/DomainDrivenDesign.html) patterns in the project. Our domain directories have the following folders:
-- application
-- domain
-- infrastructure
-
-We are using plural nouns for domain directories and subfolders (apart from the application, domain and infrastructure ones). For instance, we may have a `books` domain directory that could look like:
-
-- books
-    - application
-    - domain
-        - types
-    - infrastructure
-        - entities   
-        - repositories
-
-Unit tests are placed next to their corresponding files but end-to-end tests are placed in the `test` directory.
