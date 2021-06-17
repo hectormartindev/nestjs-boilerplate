@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common'
-import AppProviders from '../../app.providers'
-import UseCase from '../../shared/domain/use-case.interface'
+import AppProviders from '../../../app.providers'
+import UseCase from '../../../shared/domain/use-case.interface'
 import Book from '../domain/book.domain'
 import BookRepository from '../domain/book.repository.interface'
 import BookFinder from '../domain/services/book-finder.domain-service'

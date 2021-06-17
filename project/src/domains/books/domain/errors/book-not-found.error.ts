@@ -1,5 +1,5 @@
-import DomainErrorCode from '../../../shared/domain/errors/domain-error-code.domain'
-import DomainError from '../../../shared/domain/errors/domain.error'
+import DomainErrorCode from '../../../../shared/domain/errors/domain-error-code.domain'
+import DomainError from '../../../../shared/domain/errors/domain.error'
 import BookNotFoundKey from './book-not-found-key.enum'
 
 export default class BookNotFoundError extends DomainError {

@@ -1,4 +1,4 @@
-import DomainService from '../../../shared/domain/domain-service.interface'
+import DomainService from '../../../../shared/domain/domain-service.interface'
 import Book from '../book.domain'
 import BookRepository from '../book.repository.interface'
 import BookNotFoundKey from '../errors/book-not-found-key.enum'

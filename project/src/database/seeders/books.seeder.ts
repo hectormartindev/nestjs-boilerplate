@@ -1,17 +1,17 @@
 /* eslint-disable no-await-in-loop */
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import { Connection, createConnection } from 'typeorm'
-import Book from '../../src/books/domain/book.domain'
-import Genre from '../../src/books/domain/types/genre.enum'
-import BookEntityPostgres from '../../src/books/infrastructure/entities/book.entity.postgres'
-import isDevelopEnvironment from '../../src/shared/utils/is-develop-environment.util'
+import AppConfig from '../../app.config'
+import Book from '../../domains/books/domain/book.domain'
+import Genre from '../../domains/books/domain/types/genre.enum'
+import BookEntityPostgres from '../../domains/books/infrastructure/entities/book.entity.postgres'
 import * as ormconfig from '../orm.config'
 
 /**
  * Books seeder only used for development.
  */
 export default async function booksSeeder(): Promise<void> {
-  if (isDevelopEnvironment()) {
+  if (AppConfig.testModeEnabled) {
     const books = getBooksSeeders()
     const connection = await createConnection(ormconfig)
     await insertIfNotExists(books, connection)
