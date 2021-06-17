@@ -1,20 +1,18 @@
 import { Module } from '@nestjs/common'
+import { TypeOrmModule } from '@nestjs/typeorm'
 import AppProviders from '../../app.providers'
 import AddBook from '../../books/application/add-book.usecase'
 import FindBookByUuid from '../../books/application/find-book-by-uuid.usecase'
 import BookEntityPostgres from '../../books/infrastructure/entities/book.entity.postgres'
 import BookRepositoryPostgres from '../../books/infrastructure/repositories/book.repository.postgres'
-import DatabaseConnectionModule from '../../shared/infrastructure/database/relational/database-connection.module'
-import typeORMRepositoryFor from '../../shared/infrastructure/database/relational/typeorm-repository-for.util'
 import BooksController from './books.controller'
 
 const useCases = [AddBook, FindBookByUuid]
 
 @Module({
+  imports: [TypeOrmModule.forFeature([BookEntityPostgres])],
   controllers: [BooksController],
-  imports: [DatabaseConnectionModule],
   providers: [
-    typeORMRepositoryFor(BookEntityPostgres),
     {
       provide: AppProviders.BOOK_REPOSITORY,
       useClass: BookRepositoryPostgres,
