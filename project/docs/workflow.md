@@ -50,7 +50,10 @@ npm run precommit
 
 ## 🩺 Health Check
 
-The health endpoint `GET /health` should be maintained for monitoring and alerting purposes. This endpoint returns an OK response if the API is running correctly and lists the status of dependencies. For instance, it checks if the database connection is established and if an indispensable microservice is reachable.
+The health endpoint `GET /health` should be maintained for monitoring and alerting purposes. This endpoint returns an OK response if the API is running correctly and lists the status of dependencies. For instance, the health endpoint may need to check that:
+- database connection is established
+- indispensable microservices are reachable
+- external APIs are responding
 
 ## 🔑 Environment Variables
 
