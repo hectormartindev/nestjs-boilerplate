@@ -8,4 +8,5 @@
 
 - [Workflow](/project/docs/workflow.md)
 - [Conventions](/project/docs/conventions.md)
-- [IDE settings](/project/docs/ide-settings.md)
+- [IDE Settings](/project/docs/ide-settings.md)
+- [Code Review Guidelines](/project/docs/code-review-guidelines.md)
